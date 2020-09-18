@@ -1,0 +1,1 @@
+//Esta hoja nos sirve para crear una ruta, pero la logica va a estar dentro de la carpeta controllers
