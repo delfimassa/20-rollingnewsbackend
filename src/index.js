@@ -3,9 +3,9 @@ import morgan from "morgan";
 import cors from "cors";
 import path from "path"; //Permite usar el middleware que da acceso a la carpeta PUBLIC
 import './database'; //Importamos el archivo base de datos
-import categoriasRouter from './routes/productos.routes'
-import noticiasRouter from './routes/productos.routes'
-import usersRouter from './routes/productos.routes'
+import categoriasRouter from './routes/categorias.routes'
+import noticiasRouter from './routes/noticias.routes'
+import usersRouter from './routes/users.routes'
 
 //Instanciamos express
 const app = express();
