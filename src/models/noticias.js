@@ -1,3 +1,4 @@
+import { urlencoded } from "express";
 import mongoose, { Schema } from "mongoose";
 // schema es una clase y ahora hacemos u n nuevo objeto de esta clase
 const noticiaSchema = new Schema({
@@ -19,10 +20,13 @@ const noticiaSchema = new Schema({
     type: String,
     required: true,
   },noticiaFecha:{
+    type: Date,
+    required: true,
+  },noticiaCategoria:{
     type: String,
     required: true,
-  },categoria:{
-    type: String,
+  },noticiaDestacada:{
+    type:Boolean,
     required: true,
   }
 },{timestamps: true});

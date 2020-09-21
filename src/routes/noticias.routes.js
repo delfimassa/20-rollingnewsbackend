@@ -5,7 +5,7 @@ import noticiasController from "../controllers/noticias.controllers";
 // extraemos la propiedad del objeto, lo desarmamos
 const {getNoticias, crearNoticia, borrarNoticia, modificarNoticia} = noticiasController ;
 const router = Router();
-router.route("/noticias").get(getNoticias).post(crearNoticia);
+router.route("/").get(getNoticias).post(crearNoticia);
 
 router.route("/:id").delete(borrarNoticia).put(modificarNoticia)
 // queremos poner en la url un parametro, para eso los:, 

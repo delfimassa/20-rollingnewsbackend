@@ -18,7 +18,7 @@ noticiasCtrl.getNoticias = async (req, res) => {
     console.log(req.body);
     try {
       // con esta sintaxis estoy extrayendole estos datos al objeto, y abajo igualando este valor a las propiedades homonimas
-      const { noticiaTitulo, noticiaDescripcionBreve, noticiaDescripcionFull, noticiaImg, noticiaAutor, noticiaFecha, categoria } = req.body;
+      const { noticiaTitulo, noticiaDescripcionBreve, noticiaDescripcionFull, noticiaImg, noticiaAutor, noticiaFecha, noticiaCategoria, noticiaDestacada } = req.body;
       const noticiaNueva = new Noticia({
         noticiaTitulo: noticiaTitulo, 
         noticiaDescripcionBreve: noticiaDescripcionBreve, 
@@ -26,7 +26,8 @@ noticiasCtrl.getNoticias = async (req, res) => {
         noticiaImg: noticiaImg, 
         noticiaAutor: noticiaAutor, 
         noticiaFecha: noticiaFecha, 
-        categoria: categoria,
+        noticiaCategoria: noticiaCategoria,
+        noticiaDestacada: noticiaDestacada,
         //   mongo crea el id automaticamente, se llama _id y son alfanumericos
       });
       // guardar nueva noticia en la base de datos
