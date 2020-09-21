@@ -3,9 +3,9 @@ import morgan from "morgan";
 import cors from "cors";
 import path from "path"; //Permite usar el middleware que da acceso a la carpeta PUBLIC
 import './database'; //Importamos el archivo base de datos
-import categoriasRouter from './routes/productos.routes'
-import noticiasRouter from './routes/productos.routes'
-import usersRouter from './routes/productos.routes'
+import categoriasRouter from './routes/categorias.routes'
+import noticiasRouter from './routes/noticias.routes'
+import usersRouter from './routes/users.routes'
 
 //Instanciamos express
 const app = express();
@@ -25,6 +25,6 @@ app.use(express.urlencoded({ extended: true })); //Este ayuda para que el backen
 app.use(express.static(path.join(__dirname, "../public"))) //Permitir acceder a la carpeta PUBLIC
 
 //Utilizando una ruta cuando ya definimos la misma en otro archivo
-app.use('/categorias', categoriasRouter);
+// app.use('/categorias', categoriasRouter);
 app.use('/noticias', noticiasRouter);
-app.use('/users', usersRouter);
+// app.use('/users', usersRouter);
