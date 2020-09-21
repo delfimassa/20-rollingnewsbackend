@@ -25,6 +25,6 @@ app.use(express.urlencoded({ extended: true })); //Este ayuda para que el backen
 app.use(express.static(path.join(__dirname, "../public"))) //Permitir acceder a la carpeta PUBLIC
 
 //Utilizando una ruta cuando ya definimos la misma en otro archivo
-app.use('/categorias', categoriasRouter);
+// app.use('/categorias', categoriasRouter);
 app.use('/noticias', noticiasRouter);
-app.use('/users', usersRouter);
+// app.use('/users', usersRouter);
