@@ -1,7 +1,7 @@
 //Este archivo siempre se usa de esta manera, solo se cambia el URL segun la base de datos a conectar
 import mongoose from "mongoose";
 
-const url = "mongodb://localhost:27017/";
+const url = "mongodb+srv://magicmilian:R0m1d2h3-93@cluster0.odeuv.gcp.mongodb.net/rollingnewsbackend";
 
 mongoose.connect(url, {
   useNewUrlParser: true,
