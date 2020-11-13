@@ -19,6 +19,7 @@ noticiasCtrl.getNoticias = async (req, res) => {
     try {
       // con esta sintaxis estoy extrayendole estos datos al objeto, y abajo igualando este valor a las propiedades homonimas
       const { noticiaTitulo, noticiaDescripcionBreve, noticiaDescripcionFull, noticiaImg, noticiaAutor, noticiaFecha, noticiaCategoria, noticiaDestacada } = req.body;
+      // se deberia agregar otra validacion
       const noticiaNueva = new Noticia({
         noticiaTitulo: noticiaTitulo, 
         noticiaDescripcionBreve: noticiaDescripcionBreve, 
